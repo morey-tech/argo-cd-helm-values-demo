@@ -1,6 +1,6 @@
 apiVersion: v2
-name: wordpress
-description: An Umbrella Helm chart for ESO
+name: hello-world
+description: An Umbrella Helm chart
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -23,6 +23,6 @@ version: 0.1.0
 appVersion: "1.0"
 
 dependencies:
-- name: external-secrets
-  version: 0.9.0
-  repository: https://charts.external-secrets.io
+- name: hello-world
+  version: 0.1.0
+  repository: https://helm.github.io/examples

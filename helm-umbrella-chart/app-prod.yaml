@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eso-prod
+  name: prod
   namespace: argocd
 spec:
   destination:
-    namespace: eso-prod
+    namespace: prod
     name: kind
   project: default
   source:

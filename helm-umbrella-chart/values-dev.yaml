@@ -1,3 +1,2 @@
-external-secrets:
-  podLabels:
-    eso: dev
+hello-world:
+  replicaCount: 1

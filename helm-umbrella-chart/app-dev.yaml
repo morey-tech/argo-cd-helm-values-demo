@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: eso-stage
+  name: dev
   namespace: argocd
 spec:
   destination:
-    namespace: eso-stage
+    namespace: dev
     name: kind
   project: default
   source:
@@ -15,7 +15,7 @@ spec:
     helm:
       # https://argo-cd.readthedocs.io/en/stable/user-guide/helm/#values-files
       valueFiles:
-      - values-stage.yaml
+      - values-dev.yaml
   syncPolicy:
     automated:
       prune: true
