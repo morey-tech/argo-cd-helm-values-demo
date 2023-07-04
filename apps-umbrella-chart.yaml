@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: apps-umbrella-chart
+spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
+  source:
+    path: helm-umbrella-chart/apps
+    repoURL: https://github.com/morey-tech/argo-cd-helm-values-demo
+    targetRevision: HEAD
+    directory: {}
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
