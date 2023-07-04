@@ -9,7 +9,7 @@ spec:
     name: kind
   project: default
   source:
-    path: helm-umbrella-chart
+    path: helm-umbrella-chart/apps
     repoURL: https://github.com/morey-tech/argo-cd-helm-values-demo
     targetRevision: HEAD
     helm:
