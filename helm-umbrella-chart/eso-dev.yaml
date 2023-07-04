@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: eso-dev
+  namespace: argocd
+spec:
+  destination:
+    namespace: eso-dev
+    name: kind
+  project: default
+  source:
+    path: helm-umbrella-chart
+    repoURL: https://github.com/morey-tech/argo-cd-helm-values-demo
+    targetRevision: HEAD
+    helm:
+      # https://argo-cd.readthedocs.io/en/stable/user-guide/helm/#values-files
+      valueFiles:
+      - values-dev.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

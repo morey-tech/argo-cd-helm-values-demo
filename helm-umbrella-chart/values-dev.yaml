@@ -1,0 +1,3 @@
+external-secrets:
+  podLabels:
+    eso: dev

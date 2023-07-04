@@ -1,0 +1,8 @@
+external-secrets:
+  certController:
+    podDisruptionBudget: 
+      enabled: true
+      minAvailable: 1
+  podLabels:
+    eso: prod
+  replicaCount: 3
