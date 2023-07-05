@@ -1,20 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: stage
+  name: hello-world-dev
   namespace: argocd
 spec:
   destination:
-    namespace: stage
+    namespace: hello-world
     name: kind
   project: default
   source:
     chart: hello-world
     repoURL: https://helm.github.io/examples
     targetRevision: 0.1.0
-    helm:
-      values: |
-        replicaCount: 2
   syncPolicy:
     automated:
       prune: true
