@@ -1,2 +1,1 @@
-hello-world:
-  replicaCount: 1
+replicaCount: 1
